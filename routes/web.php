@@ -33,9 +33,13 @@ Route::middleware(['auth', 'verified','rolemanager:admin'])->group(function () {
             Route::get('/order/history', 'order_history')->name('admin.order.history');
         });
         Route::controller(CategoryController::class)->group(function () {
-            Route::get('/category/create', 'index')->name('category.create');
-            Route::get('/category/manage', 'manage')->name('category.manage');
-        });
+    Route::get('/category/create', 'index')->name('category.create');
+    Route::get('/category/manage', 'manage')->name('category.manage');
+    Route::post('/category/store', 'store')->name('category.store'); // إضافة مسار الحفظ
+    Route::get('/category/edit/{id}', 'edit')->name('category.edit'); // إضافة مسار صفحة التعديل
+    Route::post('/category/update', 'update')->name('category.update'); // إضافة مسار التحديث
+    Route::get('/category/delete/{id}', 'destroy')->name('category.delete'); // إضافة مسار الحذف
+});
         Route::controller(SubCategoryController::class)->group(function () {
             Route::get('/subcategory/create', 'index')->name('subcategory.create');
             Route::get('/subcategory/manage', 'manage')->name('subcategory.manage');
