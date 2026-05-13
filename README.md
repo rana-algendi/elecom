@@ -26,7 +26,7 @@ To get this project up and running on your local machine, follow these steps:
    git clone [https://github.com/rana-algendi/elecom.git](https://github.com/rana-algendi/elecom.git)
 2.Install PHP dependencies:
 
-    ```bash
+    
     composer install
 
 3.Environment Configuration:
@@ -39,18 +39,17 @@ Update DB_DATABASE, DB_USERNAME, and DB_PASSWORD in the .env file with your loca
 
 4.Generate Application Key:
 
-    ```bash
+   
     php artisan key:generate
 
 5.Run Database Migrations:
 
-    ```bash
+    
     php artisan migrate
 
 6.Start the Local Server:
 
-Bash
-php artisan serve
+    php artisan serve
 Now you can access the app at http://127.0.0.1:8000.
 
 Developed by Rana Algendi.
