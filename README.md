@@ -25,8 +25,9 @@ To get this project up and running on your local machine, follow these steps:
    ```bash
    git clone [https://github.com/rana-algendi/elecom.git](https://github.com/rana-algendi/elecom.git)
 2.Install PHP dependencies:
-Bash
-composer install
+
+    ```bash
+    composer install
 
 3.Environment Configuration:
 
@@ -38,13 +39,13 @@ Update DB_DATABASE, DB_USERNAME, and DB_PASSWORD in the .env file with your loca
 
 4.Generate Application Key:
 
-Bash
-php artisan key:generate
+    ```bash
+    php artisan key:generate
 
 5.Run Database Migrations:
 
-Bash
-php artisan migrate
+    ```bash
+    php artisan migrate
 
 6.Start the Local Server:
 
